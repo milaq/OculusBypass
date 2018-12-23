@@ -34,11 +34,6 @@ void InitializeLogging()
 	spdlog::register_logger(Log);
 	Log->set_level(spdlog::level::debug);
 	Log->flush_on(spdlog::level::debug);
-
-	char processFileName[32767] = { 0 };
-	GetModuleFileNameA(nullptr, processFileName, sizeof(processFileName));
-	//Log->info("{} loaded into {}", Title, processFileName);
-	//Log->info("Command line: {}", GetCommandLine());
 }
 #endif
 
